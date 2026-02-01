@@ -11,7 +11,7 @@ Just hand movements 🖐️
 
 This project combines **Computer Vision + Game Development** to create a futuristic, touch-free gaming experience directly in the browser.
 
-[Visit Gesture Run Website](https://gesture-run.vercel.app)
+[Wanna Play The Game](https://gesture-run.vercel.app)
 ---
 
 ## ✨ Key Highlights
