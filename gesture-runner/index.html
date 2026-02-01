@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gesture Runner</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- MediaPipe Hands (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="hud">
+        <div class="hudRow">
+          <div class="pill"><span class="label">Score</span><span id="score">0</span></div>
+          <div class="pill"><span class="label">Coins</span><span id="coins">0</span></div>
+          <div class="pill"><span class="label">Status</span><span id="status">Waiting…</span></div>
+        </div>
+
+        <div class="hudRow">
+          <div class="pill">
+            <span class="label">Gesture</span>
+            <span id="gesture">—</span>
+          </div>
+          <div class="pill small">
+            <span class="label">Hand</span>
+            <span id="handStatus">Starting camera…</span>
+          </div>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="900" height="540"></canvas>
+
+      <!-- Optional camera preview -->
+      <div id="cameraWrap" aria-label="Camera preview">
+        <video id="camera" playsinline></video>
+        <canvas id="debugCanvas" width="320" height="240"></canvas>
+      </div>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <h1>Gesture Runner</h1>
+          <div id="startForm">
+            <p>
+              Enter your name and choose a location to set the theme:
+            </p>
+            <div class="formRow">
+              <label for="playerName">Name</label>
+              <input type="text" id="playerName" placeholder="Your name" autocomplete="off" />
+            </div>
+            <div class="formRow">
+              <label for="themeSelect">Location</label>
+              <select id="themeSelect">
+                <option value="normal">Normal</option>
+                <option value="city">City</option>
+                <option value="forest">Forest</option>
+              </select>
+            </div>
+            <button id="startBtn" class="primaryBtn">Start</button>
+          </div>
+          <div id="gameInfo" style="display: none;">
+            <p>
+              Control the runner using only your <strong>index finger</strong> movements (one hand):
+              <br />
+              <strong>Left</strong>/<strong>Right</strong> to change lanes,
+              <strong>Up</strong> to jump,
+              <strong>Down</strong> to slide.
+            </p>
+            <p>
+              Keep your <strong>hand visible</strong> in the camera and move the <strong>index fingertip</strong> clearly.
+            </p>
+            <p>
+              To <strong>start</strong> and <strong>restart</strong>, do an <strong>Up</strong> gesture (Jump).
+            </p>
+            <p class="muted" id="secureHint"></p>
+            <button id="restartBtn" class="primaryBtn">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="handTracking.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
