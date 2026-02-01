@@ -87,5 +87,5 @@ gesture-runner/
 ### ✅ Option 2: Python Server
 ```bash
 python -m http.server
-### ✅ PLAY THE GAME
-gesture-run.vercel.app
+[Visit Gesture Run Website](https://gesture-run.vercel.app)
+
