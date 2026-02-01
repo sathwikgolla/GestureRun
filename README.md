@@ -1,110 +1,90 @@
-🎮 GestureRun
-🖐️ A Hand Gesture Controlled Endless Runner Game
+# 🎮 GestureRun
+## 🖐️ A Hand Gesture Controlled Endless Runner Game
 
-🚀 Run. Jump. Slide. Dodge — all using your hands.
+> 🚀 *Run. Jump. Slide. Dodge — all using your hands.*
 
-GestureRun is a Temple Run–style endless runner game controlled entirely by real-time hand gestures using a webcam.
-No keyboard ❌ | No mouse ❌ | Just hand movements 🖐️
+**GestureRun** is a **Temple Run–style endless runner game** controlled entirely by **real-time hand gestures using a webcam**.  
 
-This project combines Computer Vision + Game Development to create a futuristic, touch-free gaming experience directly in the browser.
+No keyboard ❌  
+No mouse ❌  
+Just hand movements 🖐️  
 
-✨ Key Highlights
+This project combines **Computer Vision + Game Development** to create a futuristic, touch-free gaming experience directly in the browser.
 
-✅ 100% gesture-controlled gameplay
-✅ Real-time webcam hand tracking
-✅ Smooth left / right / jump / slide controls
-✅ Endless runner mechanics
-✅ Runs fully in the browser
-✅ No backend required
+---
 
-🎯 Gesture Controls
-🖐️ Hand Movement	🎮 Game Action
-⬅️ Move hand LEFT	Move player left
-➡️ Move hand RIGHT	Move player right
-⬆️ Move hand UP	Jump
-⬇️ Move hand DOWN	Slide
+## ✨ Key Highlights
 
-Gestures are detected by tracking the palm center and comparing movement across frames.
+- ✅ 100% gesture-controlled gameplay  
+- ✅ Real-time webcam hand tracking  
+- ✅ Smooth left / right / jump / slide controls  
+- ✅ Endless runner mechanics  
+- ✅ Runs fully in the browser  
+- ✅ No backend required  
 
-🧠 How It Works
+---
 
-🔹 Webcam captures live video
-🔹 MediaPipe Hands detects hand landmarks
-🔹 Palm movement direction is calculated
-🔹 Gestures are mapped to game actions
-🔹 Game updates in real-time using Canvas API
+## 🎯 Gesture Controls
 
-🛠️ Tech Stack
+| 🖐️ Hand Movement | 🎮 Game Action |
+|------------------|--------------|
+| ⬅️ Move hand LEFT | Move player left |
+| ➡️ Move hand RIGHT | Move player right |
+| ⬆️ Move hand UP | Jump |
+| ⬇️ Move hand DOWN | Slide |
 
-🧩 Frontend
+> Gestures are detected by tracking the **palm center** and comparing movement across frames.
 
-HTML5
+---
 
-CSS3
+## 🧠 How It Works
 
-JavaScript (Vanilla)
+- 🔹 Webcam captures live video  
+- 🔹 MediaPipe Hands detects hand landmarks  
+- 🔹 Palm movement direction is calculated  
+- 🔹 Gestures are mapped to game actions  
+- 🔹 Game updates in real-time using **Canvas API**
 
-👁️ Computer Vision
+---
 
-MediaPipe Hands
+## 🛠️ Tech Stack
 
-WebRTC (camera access)
+### 🧩 Frontend
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla)  
 
-🎮 Game Engine
+### 👁️ Computer Vision
+- MediaPipe Hands  
+- WebRTC (camera access)  
 
-HTML Canvas API
+### 🎮 Game Engine
+- HTML Canvas API  
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
+
 gesture-runner/
 │
-├── index.html        # Main entry file
-├── style.css         # UI & layout styling
-├── game.js           # Game logic & physics
-├── handTracking.js   # Gesture detection logic
-└── assets/           # Images / sounds
+├── index.html # Main entry file
+├── style.css # UI & layout styling
+├── game.js # Game logic & physics
+├── handTracking.js # Gesture detection logic
+└── assets/ # Images / sounds
 
-▶️ How to Run the Game
+---
 
-⚠️ Webcam access requires a local server (file:// won’t work)
+## ▶️ How to Run the Game
 
-✅ Option 1: VS Code (Recommended)
+⚠️ **Webcam access requires a local server** (file:// won’t work)
 
-Open the project folder in VS Code
+### ✅ Option 1: VS Code (Recommended)
+1. Open the project folder in VS Code  
+2. Install **Live Server** extension  
+3. Right-click `index.html` → **Open with Live Server**
 
-Install Live Server extension
-
-Right-click index.html → Open with Live Server
-
-✅ Option 2: Python Server
+### ✅ Option 2: Python Server
+```bash
 python -m http.server
-
-
-Open in browser:
-
 http://localhost:8000
-
-📸 Demo / Screenshots
-
-📌 (Add screenshots, GIFs, or a demo video here to increase impact)
-
-🎓 What I Learned
-
-✔️ Browser-based computer vision
-✔️ Real-time gesture processing
-✔️ Canvas game development
-✔️ Collision detection & physics
-✔️ Mapping physical motion to digital actions
-
-🚀 Future Improvements
-
-🔹 3D version using Three.js
-🔹 Mobile camera support
-🔹 Sound effects & background music
-🔹 More gestures (pause, speed boost)
-🔹 Leaderboard & high scores
-
-⚖️ Disclaimer
-
-This project is inspired by Temple Run / Subway Surfers
-but is a fully original implementation built for learning and demonstration purposes.
-No proprietary assets or APIs are used.
